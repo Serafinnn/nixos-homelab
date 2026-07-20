@@ -1,0 +1,12 @@
+result
+result-*
+*.qcow2
+*.img
+*.iso
+
+.direnv/
+.envrc
+
+*.log
+
+.secrets
