@@ -10,3 +10,6 @@ result-*
 *.log
 
 .secrets
+keys.txt
+*.agekey
+age-keys/

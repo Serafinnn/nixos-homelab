@@ -13,6 +13,11 @@
       url = "github:nix-community/colmena";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -20,6 +25,7 @@
       nixpkgs,
       disko,
       colmena,
+      sops-nix,
       ...
     }:
 
@@ -32,6 +38,7 @@
 
       k72jrModules = [
         disko.nixosModules.disko
+        sops-nix.nixosModules.sops
         ./hosts/k72jr
       ];
     in
@@ -78,6 +85,10 @@
       devShells.${system}.default = pkgs.mkShell {
         packages = [
           colmena.packages.${system}.colmena
+
+          pkgs.sops
+          pkgs.age
+          pkgs.ssh-to-age
         ];
       };
     };

@@ -3,8 +3,10 @@
 {
   imports = [
     ./disk-config.nix
+    ./secrets.nix
 
     ../../modules/base
+    ../../modules/security/sops.nix
     ../../modules/users/serafin.nix
     ../../modules/services/ssh.nix
   ];
