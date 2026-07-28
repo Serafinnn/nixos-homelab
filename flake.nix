@@ -73,7 +73,6 @@
 
             tags = [
               "servers"
-              "homelab"
               "legacy-hardware"
             ];
 
