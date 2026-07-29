@@ -74,6 +74,7 @@
             tags = [
               "servers"
               "legacy-hardware"
+              "docker"
             ];
 
             buildOnTarget = false;
