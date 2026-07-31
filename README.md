@@ -21,7 +21,9 @@ Laptops that I can get from random marketplaces for less than 100PLN. At least 4
 - [x] Default server config
 - [x] Secrets
 - [x] Tailscale
-- [ ] Docker
+- [x] Wifi
+- [x] Docker
+- [ ] Storage
 - [ ] Kubernetes
 - [ ] GitHub Actions
 - [ ] Flux

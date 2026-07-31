@@ -3,6 +3,11 @@ keys:
   - &host_k72jr age1l7l524cdvnhwg457esg2yhmz0eujsj38v2yjhv2h4mause5a5eusdnldju
 
 creation_rules:
+  - path_regex: ^secrets/common\.yaml$
+    key_groups:
+      - age:
+          - *admin_serafin
+          - *host_k72jr
   - path_regex: secrets/k72jr\.yaml$
     key_groups:
       - age:

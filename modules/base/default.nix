@@ -38,5 +38,6 @@
     unzip
     pciutils
     usbutils
+    iw
   ];
 }

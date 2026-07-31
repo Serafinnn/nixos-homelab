@@ -3,11 +3,12 @@
 {
   imports = [
     ./disk-config.nix
-    ./secrets.nix
 
     ../../profiles/common-server.nix
     ../../modules/virtualization/containers/whoami.nix
   ];
+
+  sops.defaultSopsFile = ../../secrets/k72jr.yaml;
 
   networking = {
     hostName = "k72jr";
