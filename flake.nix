@@ -41,16 +41,33 @@
         sops-nix.nixosModules.sops
         ./hosts/k72jr
       ];
+
+      ideapadModules = [
+        disko.nixosModules.disko
+        sops-nix.nixosModules.sops
+        ./hosts/ideapad
+      ];
     in
     {
-      nixosConfigurations.k72jr = nixpkgs.lib.nixosSystem {
-        inherit system;
+      nixosConfigurations = {
+        k72jr = nixpkgs.lib.nixosSystem {
+          inherit system;
 
-        specialArgs = {
-          inherit inputs;
+          specialArgs = {
+            inherit inputs;
+          };
+
+          modules = k72jrModules;
         };
+        ideapad = nixpkgs.lib.nixosSystem {
+          inherit system;
 
-        modules = k72jrModules;
+          specialArgs = {
+            inherit inputs;
+          };
+
+          modules = ideapadModules;
+        };
       };
 
       colmenaHive = colmena.lib.makeHive {
@@ -69,6 +86,22 @@
 
           deployment = {
             targetHost = "k72jr";
+            targetUser = "serafin";
+
+            tags = [
+              "servers"
+              "legacy-hardware"
+              "docker"
+            ];
+
+            buildOnTarget = false;
+          };
+        };
+        ideapad = {
+          imports = ideapadModules;
+
+          deployment = {
+            targetHost = "ideapad";
             targetUser = "serafin";
 
             tags = [

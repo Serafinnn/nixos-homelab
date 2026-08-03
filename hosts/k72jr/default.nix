@@ -3,8 +3,9 @@
 {
   imports = [
     ./disk-config.nix
-
+    ../../modules/boot/legacy.nix
     ../../profiles/common-server.nix
+
     ../../modules/virtualization/containers/whoami.nix
   ];
 

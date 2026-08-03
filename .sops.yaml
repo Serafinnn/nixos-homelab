@@ -1,6 +1,7 @@
 keys:
   - &admin_serafin age1sdq69qc9zsdl0arpgf77zlqtzl5secen9u8z3smatk8qhjduwf2q0jkxm9
   - &host_k72jr age1l7l524cdvnhwg457esg2yhmz0eujsj38v2yjhv2h4mause5a5eusdnldju
+  - &host_ideapad age1fxp8ne0ey2xsfasmwzxjwnyp56lp8s5638h6wtj7qjy4mam2qurs8v5efj
 
 creation_rules:
   - path_regex: ^secrets/common\.yaml$
@@ -8,8 +9,14 @@ creation_rules:
       - age:
           - *admin_serafin
           - *host_k72jr
+          - *host_ideapad
   - path_regex: secrets/k72jr\.yaml$
     key_groups:
       - age:
           - *admin_serafin
           - *host_k72jr
+  - path_regex: secrets/ideapad\.yaml$
+    key_groups:
+      - age:
+          - *admin_serafin
+          - *host_ideapad
