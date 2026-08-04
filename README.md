@@ -12,9 +12,10 @@ When I finish this anyone shuld be able to use this repo to start their own home
 
 ## Hosts
 
-Laptops that I can get from random marketplaces for less than 100PLN. At least 4GB RAM. Preferably with a hard drive present.
+Hardware that I can get from random marketplaces/firends/family.
 
-- k72jr (old ASUS laptop)
+- k72jr
+- ideapad
 
 ## Road map ish
 
