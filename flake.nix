@@ -36,13 +36,27 @@
         inherit system;
       };
 
+      revisionModule = {
+        system.configurationRevision =
+          inputs.self.rev
+          or inputs.self.dirtyRev
+          or null;
+
+        system.nixos.label =
+          inputs.self.shortRev
+          or inputs.self.dirtyShortRev
+          or "unknown";
+      };
+
       k72jrModules = [
+        revisionModule
         disko.nixosModules.disko
         sops-nix.nixosModules.sops
         ./hosts/k72jr
       ];
 
       ideapadModules = [
+        revisionModule
         disko.nixosModules.disko
         sops-nix.nixosModules.sops
         ./hosts/ideapad
