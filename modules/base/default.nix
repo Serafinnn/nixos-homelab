@@ -3,6 +3,7 @@
 {
   imports = [
     ./headless.nix
+    ./directories.nix
   ];
 
   time.timeZone = "Europe/Warsaw";
