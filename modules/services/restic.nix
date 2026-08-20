@@ -1,13 +1,16 @@
 { config, ... }:
+let 
+  hostName = config.networking.hostName;
+in 
 {
   sops.secrets."restic/s3_access_key_id" = {
     sopsFile = ../../secrets/common.yaml;
   };
-  
+
   sops.secrets."restic/s3_secret_access_key" = {
     sopsFile = ../../secrets/common.yaml;
   };
-  
+
   sops.secrets."restic/password" = { };
 
   sops.templates."restic-env" = {
@@ -21,7 +24,7 @@
     initialize = true;
 
     repository =
-      "s3:s3.eu-north-1.amazonaws.com/serafin-homelab-backups-037063406021-eu-north-1-an/k72jr";
+      "s3:s3.eu-north-1.amazonaws.com/serafin-homelab-backups-037063406021-eu-north-1-an/${hostName}";
 
     passwordFile =
       config.sops.secrets."restic/password".path;

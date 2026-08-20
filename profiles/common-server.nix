@@ -4,6 +4,7 @@
     ../modules/base
     ../modules/security/sops.nix
     ../modules/services/ssh.nix
+    ../modules/services/restic.nix
     ../modules/networking/tailscale.nix
     ../modules/networking/wifi.nix
     ../modules/virtualization/docker.nix

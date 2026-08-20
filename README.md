@@ -4,7 +4,7 @@
 
 ## Goal
 
-Goal for this project is to have a declarative and simple way to create, manage and use private machines. Needed services should be stored as modules. If a machine requires docker module present it will be just one import line in *default.nix* inside that hosts directory. Testing and deploying new applications or services shloud require least possible steps.
+Goal for this project is to have a declarative and simple way to create, manage and use private machines. Needed services should be stored as modules. If a machine requires docker module present it will be just one import line in *default.nix* inside that hosts directory. Testing and deploying new applications or services should require least possible steps.
 
 Also a learning experience.
 
@@ -24,10 +24,10 @@ Hardware that I can get from random marketplaces/firends/family.
 - [x] Tailscale
 - [x] Wifi
 - [x] Docker
+- [x] Restic
 - [ ] Storage
 - [ ] Kubernetes
 - [ ] GitHub Actions
 - [ ] Flux
 - [ ] Monitoring
-- [ ] Restic
 - [ ] Probably something else that I did not think of

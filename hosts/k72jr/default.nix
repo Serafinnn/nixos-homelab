@@ -6,7 +6,6 @@
     ../../modules/boot/legacy.nix
     ../../profiles/common-server.nix
 
-    ../../modules/services/restic.nix
     ../../modules/virtualization/containers/whoami.nix
   ];
 
